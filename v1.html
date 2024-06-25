@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vue Basics</title>
+    <script src="./v1.js"></script>
+</head>
+<body>
+    <div id="app">
+        <button @click="count++">{{ count }}</button>
+    </div>
+
+    <span>Message: {{ msg }}</span>
+
+    <p>Using text interpolation: {{ rawHtml }}</p>
+    <p>Using v-html directive: <span style="color: red;" v-html="rawHtml">Hello World</span></p>
+    <!-- v-html is called Directive-->
+
+    <div v-bind:id="dynamicId">whatsupp </div>
+    <!-- OR <div :id="dynamicId"></div> 
+    OR  <div :id>  <div>-->
+
+    <button :disabled="isButtonDisabled">Button</button>
+
+    <div v-bind="objectOfAttrs"></div>
+
+</body>
+</html>
